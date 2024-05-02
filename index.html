@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas and Shapes positions - Creative Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Exploring Spatial Arrangements with Canvas and Shapes</h1>
+      <div id="canavasdiv">
+        <canvas id="myCanvas" width="400" height="400"></canvas>
+
+        <div class="dropdown">
+          <button
+            onclick="toggleDropdown('shapeDropdown')"
+            class="dropdown-select"
+          >
+            Select Shape
+          </button>
+          <div id="shapeDropdown" class="dropdown-options">
+            <a href="#" onclick="drawRandomShape('Circle', 0)">Circle</a>
+            <a href="#" onclick="drawRandomShape('Square', 1)">Square</a>
+            <a href="#" onclick="drawRandomShape('Triangle', 2)">Triangle</a>
+            <a href="#" onclick="drawRandomShape('Pentagon', 3)">Pentagon</a>
+            <a href="#" onclick="drawRandomShape('Heart', 4)">Heart</a>
+
+            <a href="#" onclick="drawRandomShape('Octagon', 5)">Octagon</a>
+            <a href="#" onclick="drawRandomShape('Star', 6)">Star</a>
+            <a href="#" onclick="drawRandomShape('Hexagon', 7)">Hexagon</a>
+
+            <a href="#" onclick="drawRandomShape('Diamond', 8)">Diamond</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="width: 100%">
+        <!-- Checkboxes for position selection -->
+        <div class="checkbox-container">
+          <input type="checkbox" id="nearbyCheckbox" />
+          <label for="nearbyCheckbox">Nearby</label>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="exactPositionCheckbox" />
+          <label for="exactPositionCheckbox">Exact Position</label>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="randomPositionCheckbox" />
+          <label for="randomPositionCheckbox">Random Position</label>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

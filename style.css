@@ -1,0 +1,167 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #282c34;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+canvas {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #333;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dropdown {
+  margin: 10px;
+  position: relative;
+}
+
+.dropdown-select {
+  padding: 15px 25px;
+  background-color: #666;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+
+  left: 10%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-options a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-options a:hover {
+  background-color: #444;
+}
+
+.dropdown-options.show {
+  display: block;
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Additional styles for an impressive look */
+
+.dropdown-select:hover,
+.dropdown-select:focus {
+  background-color: #555;
+}
+
+.dropdown-options::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.dropdown-options::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #666 transparent;
+}
+
+#canavasdiv {
+  display: flex;
+}
+
+#backgroundEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(255, 255, 255, 0.1), transparent 70%),
+    url("background.jpg") center center/cover;
+  pointer-events: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.canvas-grid {
+  position: relative;
+}
+
+.canvas-grid .grid-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.canvas-grid .grid-line.horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.canvas-grid .grid-line.vertical {
+  width: 1px;
+  height: 100%;
+}
+
+.canvas-grid .block {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
